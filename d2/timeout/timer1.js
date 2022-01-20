@@ -4,4 +4,5 @@ for (let index of time) {
 	if (typeof index === "number" && index > 0) {
 		setTimeout(() => process.stdout.write(","), index * 1000);
 	}
+
 }

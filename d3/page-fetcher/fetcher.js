@@ -3,6 +3,7 @@
 // a local file path
 
 // It should download the resource at the URL to the local path on your machine. Upon completion, it should print out a message like Downloaded and saved 1235 bytes to ./index.html.
+
 const fs = require("fs");
 const request = require("request");
 const net = require("net");
@@ -24,21 +25,6 @@ conn.on("data", (data) => {
 	console.log(data);
 	conn.end();
 });
-
-// http
-// 	.get(options, function (res) {
-// 		console.log("Got response: " + res.statusCode);
-// 		fs.writeFile("/index.html", content, (err) => {
-// 			if (err) {
-// 				console.error(err);
-// 				return;
-// 			}
-// 			//file written successfully
-// 		});
-// 	})
-// 	.on("error", function (e) {
-// 		console.log("Got error: " + e.message);
-// 	});
 
 /* Steps
 	1. Make a request to GET
